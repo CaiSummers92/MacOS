@@ -1,0 +1,335 @@
+:root {
+  --btn-width: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Nunito";
+  font-weight: 700;
+
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  background-clip: content-box;
+  border-radius: 10px;
+  border: 5px solid transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  background-clip: content-box;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.desktop {
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("/wallpaper.jpg");
+  background-size: cover;
+
+  overflow: hidden;
+}
+
+.window {
+  position: absolute;
+
+  width: 500px;
+  height: 400px;
+
+  background: rgba(225, 225, 225, 0.95);
+
+  border-radius: 8px;
+  /* border: 1px solid rgb(191, 191, 191); */
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.7);
+
+  z-index: 0;
+}
+
+.n.border {
+  position: absolute;
+  width: calc(100% - 10px);
+  height: 5px;
+
+  left: 5px;
+
+  cursor: n-resize;
+
+  z-index: 10;
+}
+
+.e.border {
+  position: absolute;
+  width: 5px;
+  height: calc(100% - 10px);
+
+  left: calc(100% - 5px);
+  top: 5px;
+
+  cursor: e-resize;
+
+  z-index: 10;
+}
+
+.s.border {
+  position: absolute;
+  width: calc(100% - 10px);
+  height: 5px;
+
+  top: calc(100% - 5px);
+  left: 5px;
+
+  cursor: s-resize;
+
+  z-index: 10;
+}
+
+.w.border {
+  position: absolute;
+  width: 5px;
+  height: calc(100% - 10px);
+
+  top: 5px;
+
+  cursor: w-resize;
+
+  z-index: 10;
+}
+
+.ne.border {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+
+  left: calc(100% - 5px);
+
+  cursor: ne-resize;
+
+  z-index: 10;
+}
+
+.se.border {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+
+  left: calc(100% - 5px);
+  top: calc(100% - 5px);
+
+  cursor: se-resize;
+
+  z-index: 10;
+}
+
+.sw.border {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+
+  top: calc(100% - 5px);
+
+  cursor: sw-resize;
+
+  z-index: 10;
+}
+
+.nw.border {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+
+  cursor: nw-resize;
+
+  z-index: 10;
+}
+
+.top-bar {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+}
+
+.exit-btn {
+  position: absolute;
+  width: var(--btn-width);
+  height: var(--btn-width);
+
+  background: rgb(255, 95, 87);
+  border: 1px solid rgb(230, 88, 80);
+  border-radius: 100%;
+
+  top: calc(25px - var(--btn-width) / 2);
+  left: calc(25px - var(--btn-width) / 2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+}
+
+.exit-btn:active {
+  background: rgb(231, 87, 80);
+}
+
+.collapse-btn:active {
+  background: #e4a92a;
+}
+
+.fullscrn-btn:active {
+  background: #22a736;
+}
+
+.exit-btn i {
+  font-size: 10px;
+  color: #69110a;
+  opacity: 0;
+}
+
+.collapse-btn i {
+  font-size: 10px;
+  color: #8f591d;
+  opacity: 0;
+}
+
+.fullscrn-btn i {
+  font-size: 8px;
+  color: #296018;
+  opacity: 0;
+}
+
+.btns i {
+  transition: opacity 0.1s ease;
+}
+
+.btns:hover {
+  i {
+    opacity: 1;
+  }
+}
+
+.collapse-btn {
+  position: absolute;
+  width: var(--btn-width);
+  height: var(--btn-width);
+
+  background: #febc2e;
+  border: 1px solid #e2a82a;
+  border-radius: 100%;
+
+  top: calc(25px - var(--btn-width) / 2);
+  left: calc((25px - var(--btn-width) / 2) + 22px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+}
+
+.fullscrn-btn {
+  position: absolute;
+  width: var(--btn-width);
+  height: var(--btn-width);
+
+  background: #28c840;
+  border: 1px solid #23af38;
+  border-radius: 100%;
+
+  top: calc(25px - var(--btn-width) / 2);
+  left: calc((25px - var(--btn-width) / 2) + 44px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 50px);
+
+  top: 50px;
+
+  border-radius: 10px 10px 0 0;
+
+  overflow: auto;
+
+  z-index: 2;
+}
+
+.website {
+  width: 100%;
+  height: 600px;
+}
+
+.dock {
+  position: absolute;
+  width: auto;
+  height: 70px;
+
+  border-radius: 20px;
+
+  padding: 5px;
+
+  background: rgba(225, 225, 225, 0.95);
+
+  top: calc(100% - 80px);
+  left: calc(50% - 190px / 2);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1;
+}
+
+.app-icon {
+  width: 50px;
+  height: 50px;
+
+  margin: 5px;
+
+  border-radius: 10px;
+}
+
+.settings {
+  background: url("/settings_icon.png");
+  background-size: cover;
+}
+
+.appstore {
+  background: url("/appstore_icon.png");
+  background-size: cover;
+}
+
+.music {
+  background: url("/music_icon.png");
+  background-size: cover;
+}
+
+.app-icon:active {
+  filter: brightness(50%);
+}
